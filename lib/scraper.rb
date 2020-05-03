@@ -28,12 +28,12 @@ def get_courses
 end
 
 def make_courses 
-  
-end
-
-Scraper.new.get_page
-doc.css(".post").each do |post|
+  doc.css(".post").each do |post|
  course = Course.new
   course.title = post.css("h2").text
   course.schedule = post.css("date").text
   course.description = post.css("p").text
+end
+end
+
+Scraper.new.get_page
