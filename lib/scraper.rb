@@ -27,7 +27,7 @@ doc.css(".post").each do |post|
   course.description = post.css("p").text
 end
 end
-
+binding.pry
 
 
 end
