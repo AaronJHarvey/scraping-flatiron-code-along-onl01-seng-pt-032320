@@ -27,8 +27,9 @@ Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/cour
   #course.description = post.css("p").text
 end
 
-
-
+def get_courses 
+  self.get_page.css(".post")
+end
 end
 
 Scraper.new.get_page
